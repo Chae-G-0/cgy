@@ -4,6 +4,7 @@ import PD from "./PortfolioData";
 import "./reset.css";
 import "./main.scss";
 import Fsection from "./Component/Fsection";
+import Intro from "./Component/Intro";
 
 const App = () => {
     const [num, setNum] = useState(1);
@@ -64,32 +65,27 @@ const App = () => {
                     return (
                         <ReactFullpage.Wrapper>
                             <div className="section">
-                                <div className="inner">
-                                    <p>Section 1</p>
-                                    <a href="#pf01">01</a>
-                                    {/* <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button> */}
-                                </div>
+                                <Intro />
                             </div>
                             {PD.map((it) => {
                                 return (
                                     <div className="section">
                                         <div className="inner">
-                                            {/* <h2>{it.title}</h2> */}
-                                            {/* {
-                                              it.color?.map((color) => (
-                                                  <li style={{background: color}}>{color}</li>
-                                              ))
-                                            } */}
                                             <div className="box">
-                                                <div className="left">{it.content}</div>
-                                                <div className="right">{it.title}</div>
+                                                <div className="left">
+                                                    <img src={process.env.PUBLIC_URL + it.src} alt="" />
+                                                </div>
+                                                <div className="right">
+                                                    <h2>{it.title}</h2>
+                                                    <p className="des">{it.des}</p>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 );
                             })}
-                            <div className="section">
-                                <Fsection/>
+                            <div className="section Fsection">
+                                <Fsection />
                             </div>
                         </ReactFullpage.Wrapper>
                     );

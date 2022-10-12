@@ -9,45 +9,182 @@ body {
     background: #f7f7f7;
 }
 
+// header
+
+.header {
+    h1 {
+        position: fixed;
+        top: 4rem;
+        left: 16rem;
+        z-index: 1000;
+        font-size: 21px;
+        font-weight: 700;
+    }
+}
+
+// header
+
+// cover
+
+.cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: #fff;
+    color: $mainColor;
+    z-index: 999;
+
+    &.on {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 700;
+
+        li {
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.cover_open {
+    position: fixed;
+    top: 4rem;
+    right: 5rem;
+    z-index: 1000;
+    font-size: 0;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        right: 3px;
+        height: 1px;
+        background: $mainColor;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 3px;
+        right: 3px;
+        height: 1px;
+        background: $mainColor;
+    }
+
+    span {
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 0.5px);
+            left: 3px;
+            right: 3px;
+            height: 1px;
+            background: $mainColor;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 0.5px);
+            left: 3px;
+            right: 3px;
+            height: 1px;
+            background: $mainColor;
+        }
+    }
+}
+
+.cover_open.on {
+    background: #fff;
+
+    &::before {
+        display: none;
+        background: $mainColor;
+    }
+
+    &::after {
+        display: none;
+        background: $mainColor;
+    }
+
+    span {
+        &::before {
+            transform: rotate(45deg);
+            background: $mainColor;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            background: $mainColor;
+        }
+    }
+}
+
+// cover
+
+// Portfolio section
+
 .FP {
     color: $mainColor;
 
     .section {
-        background: #e2ebf0;
+        background: #fff;
         &.active {
             // font-size: 5rem;
             // transition: 1s 0.5s;
         }
-    }
 
-    .inner {
-        width: 170rem;
-        margin: 0 auto;
-        height: 80vh;
-        padding: 5rem;
-        border: 1px solid #333;
-        border-radius: 5rem;
+        .inner {
+            width: 170rem;
+            margin: 0 auto;
+            height: 80vh;
+            padding: 7rem;
+            border: 1px solid #333;
+            border-radius: 5rem;
 
-        h2 {
-            font-size: 3rem;
-            margin: 0 0 3rem 0;
-            font-weight: 700;
-        }
-
-        .box {
-            display: flex;
-            font-size: 3rem;
-
-            & > div {
-                border: 1px solid #333;
+            h2 {
+                font-size: 2.5rem;
+                margin: 0 0 2rem 0;
+                font-weight: 700;
             }
 
-            .left {
-                flex: 2;
-            }
+            .box {
+                display: flex;
+                gap: 50px;
+                font-size: 3rem;
 
-            .right {
-                flex: 1;
+                .left {
+                    border: 1px solid #333;
+                    flex: 1;
+                    border-radius: 20px;
+                    overflow: hidden;
+
+                    .pfBox {
+                    }
+                }
+
+                .right {
+                    flex: 1;
+
+                    p {
+                        font-size: 21px;
+                    }
+                }
             }
         }
     }
@@ -55,7 +192,7 @@ body {
     .gnb {
         position: fixed;
         top: 50%;
-        right: 16rem;
+        right: 5rem;
         transform: translateY(-50%);
         width: 2rem;
         z-index: 999;
@@ -92,129 +229,11 @@ body {
     }
 }
 
-.cover {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 100vh;
-    background-image: linear-gradient(to right, #434343 0%, black 100%);
-    color: #fff;
-    z-index: 999;
+// Portfolio section
 
-    &.on {
-        display: block;
-    }
-
-    ul {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-size: 3rem;
-        font-weight: 700;
-
-        li {
-            margin: 0 0 30px 0;
-            text-transform: uppercase;
-        }
-    }
-}
-
-.header {
-    h1 {
-        position: fixed;
-        top: 4rem;
-        left: 16rem;
-        z-index: 1000;
-        font-size: 21px;
-        font-weight: 700;
-    }
-}
-
-.cover_open {
-    position: fixed;
-    top: 4rem;
-    right: 16rem;
-    z-index: 1000;
-    font-size: 0;
-    width: 3rem;
-    height: 3rem;
-    border: 1px solid $mainColor;
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: 5px;
-        left: 3px;
-        right: 3px;
-        height: 1px;
-        background: #fff;
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: 5px;
-        left: 3px;
-        right: 3px;
-        height: 1px;
-        background: #fff;
-    }
-
-    span {
-        &::before {
-            content: "";
-            position: absolute;
-            top: calc(50% - 0.5px);
-            left: 3px;
-            right: 3px;
-            height: 1px;
-            background: #fff;
-        }
-
-        &::after {
-            content: "";
-            position: absolute;
-            top: calc(50% - 0.5px);
-            left: 3px;
-            right: 3px;
-            height: 1px;
-            background: #fff;
-        }
-    }
-}
-
-.cover_open.on {
-    background: #fff;
-
-    &::before {
-        display: none;
-        background: $mainColor;
-    }
-
-    &::after {
-        display: none;
-        background: $mainColor;
-    }
-
-    span {
-        &::before {
-            transform: rotate(45deg);
-            background: $mainColor;
-        }
-
-        &::after {
-            transform: rotate(-45deg);
-            background: $mainColor;
-        }
-    }
-}
+// Profile
 
 .Fsection {
-    letter-spacing: -0.025em;
-
     .inner {
         // display: flex;
     }
@@ -223,25 +242,28 @@ body {
         display: flex;
         align-items: center;
         gap: 50px;
-        margin: 170px 0;
+        margin: 150px 0;
 
         .lbox {
+            text-align: center;
             .fimg {
+                border-radius: 50%;
+                overflow: hidden;
                 width: 25rem;
                 height: 25rem;
                 border: 1px solid #333;
-                // margin: 0 0 10px 0;
-            }
-
-            span {
-                font-size: 19px;
-                font-weight: 700;
-                line-height: 1.45;
+                margin: 0 0 10px 0;
             }
 
             p {
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 1.45;
+                margin: 0 0 10px 0;
+            }
+
+            span {
                 font-size: 15px;
-                font-weight: 500;
             }
         }
 
