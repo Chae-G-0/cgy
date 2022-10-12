@@ -3,6 +3,7 @@ import ReactFullpage from "@fullpage/react-fullpage";
 import PD from "./PortfolioData";
 import "./reset.css";
 import "./main.scss";
+import Fsection from "./Component/Fsection";
 
 const App = () => {
     const [num, setNum] = useState(1);
@@ -32,14 +33,16 @@ const App = () => {
         <div className="FP">
             <Cover />
             <header className="header">
-                2022 chae portfolio {num} {con}
+                <h1>
+                    2022 Chae Portfolio {num} {con}
+                </h1>
                 <button onClick={() => setOn(!on)} className={`cover_open ${on ? "on" : ""}`}>
                     <span>커버 나오는 버튼</span>
                 </button>
             </header>
             <nav className="gnb">
                 <ul>
-                    {["cover", ...ac, "copyright"].map((it, idx) => {
+                    {["cover", ...ac, "Profile"].map((it, idx) => {
                         return (
                             <li className={num === idx + 1 ? "on" : ""}>
                                 <a href={`#${it}`}>{it}</a>
@@ -52,7 +55,7 @@ const App = () => {
                 //fullpage options
                 licenseKey={"YOUR_KEY_HERE"}
                 scrollingSpeed={1000} /* Options here */
-                anchors={["cover", ...ac, "copyright"]}
+                anchors={["cover", ...ac, "Profile"]}
                 afterLoad={(origin, destination) => {
                     setNum(destination.index + 1);
                     setCon(destination.anchor);
@@ -62,27 +65,31 @@ const App = () => {
                         <ReactFullpage.Wrapper>
                             <div className="section">
                                 <div className="inner">
-                                    <p>Section 1 (welcome to fullpage.js)</p>
+                                    <p>Section 1</p>
                                     <a href="#pf01">01</a>
-                                    <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button>
+                                    {/* <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button> */}
                                 </div>
                             </div>
                             {PD.map((it) => {
                                 return (
                                     <div className="section">
                                         <div className="inner">
-                                            <p>{it.id}</p>
-                                            {
+                                            {/* <h2>{it.title}</h2> */}
+                                            {/* {
                                               it.color?.map((color) => (
                                                   <li style={{background: color}}>{color}</li>
                                               ))
-                                            }
+                                            } */}
+                                            <div className="box">
+                                                <div className="left">{it.content}</div>
+                                                <div className="right">{it.title}</div>
+                                            </div>
                                         </div>
                                     </div>
                                 );
                             })}
                             <div className="section">
-                                <p className="inner">Section 3</p>
+                                <Fsection/>
                             </div>
                         </ReactFullpage.Wrapper>
                     );
