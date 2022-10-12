@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/cgy/static/css/main.2263ae27.css",
+    "main.js": "/cgy/static/js/main.954149f8.js",
+    "index.html": "/cgy/index.html",
+    "main.2263ae27.css.map": "/cgy/static/css/main.2263ae27.css.map",
+    "main.954149f8.js.map": "/cgy/static/js/main.954149f8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2263ae27.css",
+    "static/js/main.954149f8.js"
+  ]
+}
