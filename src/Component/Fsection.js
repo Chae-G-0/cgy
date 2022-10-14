@@ -56,7 +56,9 @@ const Fsection = () => {
                     <dl>
                         <dt>깃허브</dt>
                         <dd>
-                            <a href="https://github.com/Chae-G-0">https://github.com/Chae-G-0</a>
+                            <a href="https://github.com/Chae-G-0" target={"_blank"}>
+                                https://github.com/Chae-G-0
+                            </a>
                         </dd>
                     </dl>
                 </div>

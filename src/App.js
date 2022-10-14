@@ -76,8 +76,25 @@ const App = () => {
                                                     <img src={process.env.PUBLIC_URL + it.src} alt="" />
                                                 </div>
                                                 <div className="right">
-                                                    <h2>{it.title}</h2>
+                                                    <div className="tit">
+                                                        <h2>{it.title}</h2>
+                                                        <span>{it.en}</span>
+                                                    </div>
+                                                    <span>INFO</span>
                                                     <p className="des">{it.des}</p>
+                                                    <span>TYPE</span>
+                                                    <p className="des">{it.type}</p>
+                                                    <span>DATE</span>
+                                                    <p className="des">{it.date}</p>
+                                                    <span>FONT</span>
+                                                    <p className="des">{it.font}</p>
+                                                    <span>TOOLS</span>
+                                                    <p className="des">{it.tools}</p>
+                                                    <span>CONTRIBUTION</span>
+                                                    <p className="des">{it.contribution}</p>
+                                                    <a href={it.link} target={"_blank"}>
+                                                        WEB
+                                                    </a>
                                                 </div>
                                             </div>
                                         </div>
