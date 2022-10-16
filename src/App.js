@@ -18,7 +18,7 @@ const App = () => {
                 <ul>
                     {PD.map((it, idx) => {
                         return (
-                            <li>
+                            <li className={it.id}>
                                 <a href={`#${it.anchor}`} onClick={() => setOn(!on)}>
                                     {it.title}
                                 </a>
@@ -73,15 +73,20 @@ const App = () => {
                                         <div className="inner">
                                             <div className="box">
                                                 <div className="left">
+                                                    <a href={it.link} target="_blank">
                                                     <img src={process.env.PUBLIC_URL + it.src} alt="" />
+                                                    </a>
+
                                                 </div>
                                                 <div className="right">
                                                     <div className="tit">
-                                                        <h2>{it.title}</h2>
+                                                        <h2>
+                                                            <a href={it.link} target="_blank">
+                                                                {it.title}
+                                                            </a>
+                                                        </h2>
                                                         <span>{it.en}</span>
                                                     </div>
-                                                    <span>INFO</span>
-                                                    <p className="des">{it.des}</p>
                                                     <span>TYPE</span>
                                                     <p className="des">{it.type}</p>
                                                     <span>DATE</span>

@@ -14,8 +14,8 @@ body {
 .header {
     h1 {
         position: fixed;
-        top: 4rem;
-        left: 16rem;
+        top: 5rem;
+        left: 5rem;
         z-index: 1000;
         font-size: 21px;
         font-weight: 700;
@@ -60,7 +60,7 @@ body {
 .cover_open {
     position: fixed;
     top: 4rem;
-    right: 16rem;
+    right: 5rem;
     z-index: 1000;
     font-size: 0;
     width: 3rem;
@@ -146,18 +146,20 @@ body {
 
     .section {
         background: #fff;
+
+
         &.active {
-            // font-size: 5rem;
-            // transition: 1s 0.5s;
+
         }
 
         .inner {
-            width: 170rem;
+            position: relative;
+            width: 120rem;
             margin: 0 auto;
             height: 80vh;
-            padding: 5rem;
-            border: 1px solid #333;
             border-radius: 5rem;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
 
             h2 {
                 font-size: 2.3rem;
@@ -166,33 +168,43 @@ body {
             }
 
             .box {
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
                 display: flex;
                 gap: 50px;
                 font-size: 3rem;
+                text-align: right;
 
                 .left {
-                    border: 1px solid #333;
-                    flex: 1;
-                    border-radius: 20px;
+                    flex: 1.5;
+                    // border-radius: 20px;
                     overflow: hidden;
-                    height: 500px;
+                    height: 40rem;
+                    margin: auto 0;
+                padding: 0 5rem;
+
 
                     img {
-                        transition: 5s;
+                        // transition: 5s;
                     }
 
                     &:hover img {
-                        transform: translateY(-73%);
+                        // transform: translateY(-73%);
                     }
                 }
 
                 .right {
                     flex: 1;
+                padding: 0 5rem;
+
 
                     .tit {
                         position: relative;
                         display: flex;
                         margin: 0 0 5rem 0;
+                        justify-content: end;
 
                         span {
                             margin: auto 0 0 0;
@@ -203,7 +215,7 @@ body {
                             content: "";
                             position: absolute;
                             top: 5rem;
-                            left: 0;
+                            right: 0;
                             transform: translateY(-50%);
                             width: 5rem;
                             height: 2px;
@@ -224,7 +236,7 @@ body {
                         margin: 0 0 20px 0;
                     }
 
-                    a {
+                    & > a {
                         font-size: 1.9rem;
                         font-weight: 700;
                         display: inline-block;
