@@ -14,7 +14,7 @@ const Fsection = () => {
                 </div>
                 <div className="rbox">
                     <dl>
-                        <dt>학력 및 수료</dt>
+                        <dt>EDUCATION</dt>
                         <dd>
                             부산 그린컴퓨터아카데미 <br />
                             react 활용 프론트엔드 개발자 양성과정 수료
@@ -30,7 +30,7 @@ const Fsection = () => {
                         </dd>
                     </dl>
                     <dl>
-                        <dt>자격증 및 면허</dt>
+                        <dt>LICENSE</dt>
                         <dd>
                             컴퓨터활용 2급 필기
                             <span>2022.03</span>
@@ -45,7 +45,7 @@ const Fsection = () => {
                         </dd>
                     </dl>
                     <dl>
-                        <dt>연락처</dt>
+                        <dt>CONTACT</dt>
                         <dd>
                             <a href="tel:010">010-0000-0000</a>
                         </dd>
@@ -54,9 +54,9 @@ const Fsection = () => {
                         </dd>
                     </dl>
                     <dl>
-                        <dt>깃허브</dt>
+                        <dt>Git Hub</dt>
                         <dd>
-                            <a href="https://github.com/Chae-G-0" target={"_blank"}>
+                            <a href="https://github.com/Chae-G-0" target={"_blank"} rel="noopener noreferrer">
                                 https://github.com/Chae-G-0
                             </a>
                         </dd>

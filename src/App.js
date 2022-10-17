@@ -35,7 +35,8 @@ const App = () => {
             <Cover />
             <header className="header">
                 <h1>
-                    2022 Chae Portfolio {num} {con}
+                    2022 Chae Portfolio {num - 1}
+                    {con}
                 </h1>
                 <button onClick={() => setOn(!on)} className={`cover_open ${on ? "on" : ""}`}>
                     <span>커버 나오는 버튼</span>
@@ -73,14 +74,14 @@ const App = () => {
                                         <div className="inner">
                                             <div className="box">
                                                 <div className="left">
-                                                    <a href={it.link} target="_blank">
+                                                    <a href={it.link} target="_blank" rel="noopener noreferrer">
                                                         <img src={process.env.PUBLIC_URL + it.src} alt="" />
                                                     </a>
                                                 </div>
                                                 <div className="right">
                                                     <div className="tit">
                                                         <h2>
-                                                            <a href={it.link} target="_blank">
+                                                            <a href={it.link} target="_blank" rel="noopener noreferrer">
                                                                 {it.title}
                                                             </a>
                                                         </h2>
@@ -97,10 +98,10 @@ const App = () => {
                                                     <span>CONTRIBUTION</span>
                                                     <p className="des">{it.contribution}</p>
                                                     <div className="anchor">
-                                                        <a href={it.link} target={"_blank"}>
+                                                        <a href={it.link} target={"_blank"} rel="noopener noreferrer">
                                                             WEB
                                                         </a>
-                                                        <a href={it.code} target={"_blank"}>
+                                                        <a href={it.code} target={"_blank"} rel="noopener noreferrer">
                                                             CODE
                                                         </a>
                                                     </div>
