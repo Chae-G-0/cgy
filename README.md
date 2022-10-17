@@ -1,5 +1,5 @@
 # 2022 CGY Portfolio
-## react fullpage
+## react fullpage, scss
 
 ---
 
