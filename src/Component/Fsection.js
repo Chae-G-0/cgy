@@ -12,7 +12,7 @@ const Fsection = () => {
                     <p>채가영</p>
                     <span>1996.10.24</span>
                 </div>
-                <div className="box">
+                <div className="rbox">
                     <dl>
                         <dt>학력 및 수료</dt>
                         <dd>

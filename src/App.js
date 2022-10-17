@@ -74,9 +74,8 @@ const App = () => {
                                             <div className="box">
                                                 <div className="left">
                                                     <a href={it.link} target="_blank">
-                                                    <img src={process.env.PUBLIC_URL + it.src} alt="" />
+                                                        <img src={process.env.PUBLIC_URL + it.src} alt="" />
                                                     </a>
-
                                                 </div>
                                                 <div className="right">
                                                     <div className="tit">
@@ -97,9 +96,14 @@ const App = () => {
                                                     <p className="des">{it.tools}</p>
                                                     <span>CONTRIBUTION</span>
                                                     <p className="des">{it.contribution}</p>
-                                                    <a href={it.link} target={"_blank"}>
-                                                        WEB
-                                                    </a>
+                                                    <div className="anchor">
+                                                        <a href={it.link} target={"_blank"}>
+                                                            WEB
+                                                        </a>
+                                                        <a href={it.code} target={"_blank"}>
+                                                            CODE
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
