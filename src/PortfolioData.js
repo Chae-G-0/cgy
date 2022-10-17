@@ -54,7 +54,7 @@ const PD = [
         code: "https://github.com/Chae-G-0/test06",
         anchor: "Portfolio04",
         des: "블루샥 홈페이지",
-        type: "메인 페이지 + 반응형 웹페이지",
+        type: "메인 페이지(반응형)",
         date: "2022.08.08 ~ 2022.08.19",
         font: "Spoqa Han Sans Neo + Cormorant Garamond",
         tools: "html + css + Jquery",

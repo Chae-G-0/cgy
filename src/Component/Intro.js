@@ -4,7 +4,9 @@ const Intro = () => {
     return (
         <div className="inner">
             <h2>Introduce</h2>
-            <div className="box">타이틀</div>
+            <div className="box">
+                2022 Chae's Portfolio
+            </div>
             {/* <a href="#pf01">01</a> */}
             {/* <button onClick={() => fullpageApi.moveSectionDown()}>Click me to move down</button> */}
         </div>

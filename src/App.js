@@ -16,6 +16,11 @@ const App = () => {
         return (
             <div className={`cover ${on ? "on" : ""}`}>
                 <ul>
+                    <li>
+                        <a href="#cover" onClick={() => setOn(!on)}>
+                            Intro
+                        </a>
+                    </li>
                     {PD.map((it, idx) => {
                         return (
                             <li className={it.id}>
@@ -25,6 +30,11 @@ const App = () => {
                             </li>
                         );
                     })}
+                    <li>
+                        <a href="#Profile" onClick={() => setOn(!on)}>
+                            Profile
+                        </a>
+                    </li>
                 </ul>
             </div>
         );
@@ -35,8 +45,7 @@ const App = () => {
             <Cover />
             <header className="header">
                 <h1>
-                    2022 Chae Portfolio {num - 1}
-                    {con}
+                    2022 Chae Portfolio {num - 1} {con}
                 </h1>
                 <button onClick={() => setOn(!on)} className={`cover_open ${on ? "on" : ""}`}>
                     <span>커버 나오는 버튼</span>
