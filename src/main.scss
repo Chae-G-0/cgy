@@ -17,10 +17,9 @@ body {
     h1 {
         position: fixed;
         top: 4rem;
-        left: 50%;
-        transform: translateX(-50%);
+        left: 5rem;
         z-index: 1000;
-        font-size: 21px;
+        font-size: 19px;
         font-weight: 700;
     }
 }
@@ -152,11 +151,9 @@ body {
         // background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
         // background-blend-mode: screen;
         background: #f3f3f3;
-        // background: url(../public/img/backgroung.jpg);
 
         &::before {
             font-family: "Cormorant Garamond", serif;
-            font-weight: 500;
             font-style: italic;
         }
 
@@ -166,59 +163,40 @@ body {
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 120px;
+            font-size: 80px;
+            font-weight: 100;
+        }
+
+        &:not(:first-child)::before {
+            position: absolute;
+            top: 68%;
+            transition: 1s 0.5s;
+            font-size: 100px;
             font-weight: 100;
         }
 
         &:nth-child(2)::before {
             content: "Busan Tourism Organization";
-            position: absolute;
-            top: 68%;
-            right: 25rem;
-            font-size: 120px;
-            font-weight: 100;
+            right: 35rem;
         }
         &:nth-child(3)::before {
             content: "Seoul National University";
-            position: absolute;
-            top: 68%;
-            right: 25rem;
-            font-size: 120px;
-            font-weight: 100;
+            right: 35rem;
         }
         &:nth-child(4)::before {
             content: "Jackson Chameleon";
-            position: absolute;
-            top: 68%;
-            right: 25rem;
-            font-size: 120px;
-            font-weight: 100;
+            right: 35rem;
         }
         &:nth-child(5)::before {
             content: "Blu shaak";
-            position: absolute;
-            top: 68%;
-            right: 25rem;
-            font-size: 200px;
-            font-size: 120px;
-            font-weight: 100;
+            right: 30rem;
         }
         &:nth-child(6)::before {
             content: "Espoir";
-            position: absolute;
-            top: 68%;
-            right: 25rem;
-            font-size: 150px;
-            font-weight: 100;
+            right: 30rem;
         }
         &:nth-child(7)::before {
             content: "";
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            font-size: 120px;
-            font-weight: 100;
         }
 
         &.active {
@@ -228,13 +206,17 @@ body {
                     opacity: 1;
                 }
             }
+
+            &:not(:first-child)::before {
+                transform: scale(1.2);
+            }
         }
 
         .inner {
             position: relative;
             width: 80vw;
             margin: 0 auto;
-            height: 80vh;
+            height: 65rem;
             border-radius: 5rem;
             background: rgba(255, 255, 255, 0.3);
             backdrop-filter: blur(7px);
@@ -262,7 +244,7 @@ body {
                 .left {
                     flex: 1.5;
                     overflow: hidden;
-                    height: 50vh;
+                    height: 45vh;
                     margin: auto 0;
                     border-radius: 2rem;
                     transform: translateX(-100px);
