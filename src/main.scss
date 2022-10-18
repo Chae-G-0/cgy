@@ -20,7 +20,7 @@ body {
         left: 5rem;
         z-index: 1000;
         font-size: 19px;
-        font-weight: 700;
+        font-weight: 500;
     }
 }
 
@@ -35,7 +35,7 @@ body {
     left: 0;
     right: 0;
     height: 100vh;
-    background: #f3f3f3;
+    background: #e9ecef;
     color: $mainColor;
     text-align: center;
     z-index: 999;
@@ -114,7 +114,7 @@ body {
 }
 
 .cover_open.on {
-    background: #f3f3f3;
+    background: #e9ecef;
 
     &::before {
         display: none;
@@ -148,9 +148,7 @@ body {
 
     .section {
         position: relative;
-        // background-image: radial-gradient(73% 147%, #eadfdf 59%, #ece2df 100%), radial-gradient(91% 146%, rgba(255, 255, 255, 0.5) 47%, rgba(0, 0, 0, 0.5) 100%);
-        // background-blend-mode: screen;
-        background: #f3f3f3;
+        background: #e9ecef;
 
         &::before {
             font-family: "Cormorant Garamond", serif;
@@ -222,8 +220,6 @@ body {
             backdrop-filter: blur(7px);
             padding: 5rem;
 
-            // border: 1px solid $mainColor;
-
             h2 {
                 font-size: 2.3rem;
                 font-weight: 700;
@@ -250,14 +246,17 @@ body {
                     transform: translateX(-100px);
                     opacity: 0;
                     transition: 1s 0.3s;
-                    // border: 1px solid $mainColor;
+
+                    &:hover {
+                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                    }
 
                     img {
                         transition: 5s;
                     }
 
                     &:hover img {
-                        transform: translateY(calc(-100% + 50vh));
+                        transform: translateY(calc(-100% + 45vh));
                     }
                 }
 
@@ -286,7 +285,7 @@ body {
                             transform: translateY(-50%);
                             width: 5rem;
                             height: 1px;
-                            background: #555;
+                            background: $mainColor;
                         }
                     }
 
@@ -380,6 +379,7 @@ body {
         align-items: center;
         gap: 50px;
         margin: 150px 0;
+        word-break: keep-all;
 
         .lbox {
             text-align: center;
