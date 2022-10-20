@@ -389,14 +389,15 @@ body {
 
 .Fsection {
     .inner {
+        display: flex;
         padding: 5rem;
+        align-items: center;
     }
 
     .container {
         display: flex;
-        align-items: center;
         gap: 50px;
-        margin: 150px 0;
+        align-items: center;
         word-break: keep-all;
 
         .lbox {

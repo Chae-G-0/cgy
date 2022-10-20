@@ -3,7 +3,6 @@ import React from "react";
 const Fsection = () => {
     return (
         <div className="inner">
-            <h2>Profile</h2>
             <div className="container">
                 <div className="lbox">
                     <div className="fimg">
