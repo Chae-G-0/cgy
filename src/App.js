@@ -44,12 +44,11 @@ const App = () => {
         <div className="FP">
             <Cover />
             <header className="header">
-                <h1>
-                    2022 Chae Portfolio {num - 1} {con}
-                </h1>
+                <h1>2022 Chae Portfolio {num - 1}</h1>
                 <button onClick={() => setOn(!on)} className={`cover_open ${on ? "on" : ""}`}>
                     <span>커버 나오는 버튼</span>
                 </button>
+                <a href="mailto:rkdud4020@gmail.com">CONTACT : rkdud4020@gmail.com</a>
             </header>
             <nav className="gnb">
                 <ul>
@@ -94,8 +93,17 @@ const App = () => {
                                                                 {it.title}
                                                             </a>
                                                         </h2>
-                                                        <span>{it.en}</span>
+                                                        <div className="anchor">
+                                                            <a href={it.link} target={"_blank"} rel="noopener noreferrer">
+                                                                WEB
+                                                            </a>
+                                                            <a href={it.code} target={"_blank"} rel="noopener noreferrer">
+                                                                CODE
+                                                            </a>
+                                                        </div>
                                                     </div>
+                                                    {/* <span>{it.en}</span> */}
+
                                                     <span>TYPE</span>
                                                     <p className="des">{it.type}</p>
                                                     <span>DATE</span>
@@ -106,14 +114,6 @@ const App = () => {
                                                     <p className="des">{it.tools}</p>
                                                     <span>CONTRIBUTION</span>
                                                     <p className="des">{it.contribution}</p>
-                                                    <div className="anchor">
-                                                        <a href={it.link} target={"_blank"} rel="noopener noreferrer">
-                                                            WEB
-                                                        </a>
-                                                        <a href={it.code} target={"_blank"} rel="noopener noreferrer">
-                                                            CODE
-                                                        </a>
-                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
