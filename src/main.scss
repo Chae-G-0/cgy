@@ -214,6 +214,11 @@ body {
         }
 
         &:nth-child(7)::before {
+            content: "Canon";
+            right: 30rem;
+        }
+
+        &:nth-child(8)::before {
             content: "";
         }
 
@@ -243,6 +248,9 @@ body {
             content: "05";
         }
         &:nth-child(7):after {
+            content: "06";
+        }
+        &:nth-child(8):after {
             content: "Profile";
             top: 13rem;
             right: 13rem;
