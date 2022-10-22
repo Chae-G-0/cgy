@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+$mainColor: #333;
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-size: 1.6rem;
+    background: #f7f7f7;
+}
+
+// header
+
+.header {
+    h1 {
+        position: fixed;
+        top: 4rem;
+        left: 5rem;
+        z-index: 1000;
+        font-size: 19px;
+        font-weight: 500;
+    }
+
+    a {
+        position: fixed;
+        bottom: 4rem;
+        left: 5rem;
+        z-index: 1000;
+        font-size: 15px;
+        font-weight: 500;
+    }
+}
+
+// header
+
+// cover
+
+.cover {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    background: #e9ecef;
+    color: $mainColor;
+    text-align: center;
+    z-index: 999;
+
+    &.on {
+        display: block;
+    }
+
+    ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+        font-weight: 700;
+
+        li {
+            position: relative;
+            margin: 0 0 30px 0;
+            text-transform: uppercase;
+            transition: 0.5s;
+
+            &:hover {
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0) 50%, rgba(0, 0, 0, 0.3) 50%);
+            }
+        }
+    }
+}
+
+.cover_open {
+    position: fixed;
+    top: 4rem;
+    right: 5rem;
+    z-index: 1000;
+    font-size: 0;
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    background: transparent;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 3px;
+        right: 3px;
+        height: 1px;
+        background: $mainColor;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: 5px;
+        left: 3px;
+        right: 3px;
+        height: 1px;
+        background: $mainColor;
+    }
+
+    span {
+        &::before {
+            content: "";
+            position: absolute;
+            top: calc(50% - 0.5px);
+            left: 3px;
+            right: 3px;
+            height: 1px;
+            background: $mainColor;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: calc(50% - 0.5px);
+            left: 3px;
+            right: 3px;
+            height: 1px;
+            background: $mainColor;
+        }
+    }
+}
+
+.cover_open.on {
+    background: #e9ecef;
+
+    &::before {
+        display: none;
+        background: $mainColor;
+    }
+
+    &::after {
+        display: none;
+        background: $mainColor;
+    }
+
+    span {
+        &::before {
+            transform: rotate(45deg);
+            background: $mainColor;
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+            background: $mainColor;
+        }
+    }
+}
+
+// cover
+
+// Portfolio section
+
+.FP {
+    color: $mainColor;
+
+    .section {
+        position: relative;
+        background: #e9ecef;
+
+        &::before {
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+        }
+
+        &:nth-child(1)::before {
+            content: "2022 Chae's Portfolio";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 120px;
+            font-weight: 500;
+        }
+
+        &:not(:first-child)::before {
+            position: absolute;
+            top: 68%;
+            transition: 1s 0.5s;
+            font-size: 100px;
+            font-weight: 100;
+        }
+
+        &:nth-child(2)::before {
+            content: "Busan Tourism Organization";
+            right: 35rem;
+        }
+
+        &:nth-child(3)::before {
+            content: "Seoul National University";
+            right: 35rem;
+        }
+
+        &:nth-child(4)::before {
+            content: "Blu shaak";
+            right: 35rem;
+        }
+
+        &:nth-child(5)::before {
+            content: "Jackson Chameleon";
+            right: 30rem;
+        }
+
+        &:nth-child(6)::before {
+            content: "Espoir";
+            right: 30rem;
+        }
+
+        &:nth-child(7)::before {
+            content: "Canon";
+            right: 30rem;
+        }
+
+        &:nth-child(8)::before {
+            content: "";
+        }
+
+        &:not(:first-child)::after {
+            content: "01";
+            position: absolute;
+            top: 1rem;
+            right: 13rem;
+            font-family: "Cormorant Garamond", serif;
+            font-style: italic;
+            font-size: 250px;
+            color: rgba(0, 0, 0, 0.6);
+        }
+        &:nth-child(2):after {
+            content: "01";
+        }
+        &:nth-child(3):after {
+            content: "02";
+        }
+        &:nth-child(4):after {
+            content: "03";
+        }
+        &:nth-child(5):after {
+            content: "04";
+        }
+        &:nth-child(6):after {
+            content: "05";
+        }
+        &:nth-child(7):after {
+            content: "06";
+        }
+        &:nth-child(8):after {
+            content: "Profile";
+            top: 13rem;
+            right: 13rem;
+            font-size: 100px;
+        }
+
+        &.active {
+            .inner {
+                .box > div {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            &:not(:first-child)::before {
+                transform: scale(1.2);
+            }
+        }
+
+        &:nth-child(1) .inner {
+            animation: back 5s infinite;
+        }
+
+        @keyframes back {
+            0% {
+                backdrop-filter: blur(7px);
+            }
+            50% {
+                backdrop-filter: blur(0px);
+            }
+            100% {
+                backdrop-filter: blur(7px);
+            }
+        }
+
+        .inner {
+            position: relative;
+            width: 80vw;
+            margin: 0 auto;
+            height: 65rem;
+            border-radius: 5rem;
+            background: rgba(255, 255, 255, 0.3);
+            backdrop-filter: blur(7px);
+            padding: 5rem;
+
+            h2 {
+                font-size: 2.3rem;
+                font-weight: 700;
+                margin: 0 0.5rem 0 0;
+            }
+
+            .box {
+                display: flex;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+                gap: 5rem;
+                font-size: 3rem;
+                transition: 0.5s;
+                padding: 10rem;
+
+                .left {
+                    flex: 1.5;
+                    overflow: hidden;
+                    height: 45vh;
+                    margin: auto 0;
+                    border-radius: 2rem;
+                    transform: translateX(-100px);
+                    opacity: 0;
+                    transition: 1s 0.3s;
+
+                    &:hover {
+                        box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+                    }
+
+                    img {
+                        transition: 5s;
+                    }
+
+                    &:hover img {
+                        transform: translateY(calc(-100% + 45vh));
+                    }
+                }
+
+                .right {
+                    border-right: 1px solid #333;
+                    flex: 1;
+                    transform: translateX(100px);
+                    opacity: 0;
+                    transition: 1s 0.7s;
+                    margin: auto 0;
+                    height: 40vh;
+                    padding: 0 50px 0 0;
+
+                    .tit {
+                        position: relative;
+                        display: flex;
+                        margin: 0 0 1rem 0;
+                        justify-content: space-between;
+
+                        span {
+                            margin: auto 0 0 0;
+                            font-weight: 500;
+                        }
+
+                        // &::after {
+                        //     content: "";
+                        //     position: absolute;
+                        //     top: 5rem;
+                        //     left: 0;
+                        //     transform: translateY(-50%);
+                        //     width: 5rem;
+                        //     height: 1px;
+                        //     background: $mainColor;
+                        // }
+                    }
+
+                    span {
+                        display: block;
+                        font-size: 1.7rem;
+                        font-weight: 700;
+                        margin: 0 0 10px 0;
+                    }
+
+                    p {
+                        font-size: 1.7rem;
+                        font-weight: 500;
+                        margin: 0 0 25px 0;
+                        word-break: keep-all;
+                    }
+
+                    .anchor {
+                        display: flex;
+                        gap: 5px;
+                        // justify-content: flex-end;
+
+                        a {
+                            font-size: 1.7rem;
+                            font-weight: 700;
+                            display: inline-block;
+                            border: 1px solid $mainColor;
+                            padding: 10px 20px 8px;
+                            border-radius: 5rem;
+
+                            &:hover {
+                                background: $mainColor;
+                                color: #fff;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .gnb {
+        position: fixed;
+        top: 50%;
+        right: 5rem;
+        transform: translateY(-50%);
+        width: 2rem;
+        z-index: 999;
+
+        li {
+            font-size: 0;
+            position: relative;
+            height: 2rem;
+
+            a {
+                display: block;
+                height: 2rem;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    width: 100%;
+                    height: 1px;
+                    background: $mainColor;
+                    transition: width 0.3s;
+                }
+            }
+        }
+
+        li.on {
+            a {
+                &::after {
+                    width: 150%;
+                }
+            }
+        }
+    }
+}
+
+// Portfolio section
+
+// Profile
+
+.Fsection {
+    .inner {
+        display: flex;
+        padding: 5rem;
+        align-items: center;
+    }
+
+    .container {
+        display: flex;
+        gap: 50px;
+        align-items: center;
+        word-break: keep-all;
+
+        .lbox {
+            text-align: center;
+
+            .fimg {
+                border-radius: 50%;
+                overflow: hidden;
+                width: 25rem;
+                height: 25rem;
+                border: 1px solid #333;
+                margin: 0 0 10px 0;
+            }
+
+            p {
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 1.45;
+                margin: 0 0 5px 0;
+            }
+
+            span {
+                font-size: 15px;
+            }
+        }
+
+        .rbox {
+            display: flex;
+            gap: 50px;
+
+            dl {
+                dt {
+                    font-size: 19px;
+                    font-weight: 700;
+                    margin: 0 0 10px 0;
+                }
+
+                dd {
+                    font-size: 17px;
+                    font-weight: 500;
+                    line-height: 1.2;
+                    margin: 0 0 5px 0;
+
+                    span {
+                        font-size: 13px;
+                        padding: 0 0 0 10px;
+                    }
+                }
+            }
+        }
+    }
+}
