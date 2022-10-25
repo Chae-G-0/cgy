@@ -11,7 +11,7 @@ const PD = [
         type: "메인 페이지 + 서브 페이지",
         date: "2022.09.30 ~ 2022.10.11",
         font: "Spoqa Han Sans",
-        tools: "react + scss + react router dom + react slick + 공공데이터 API",
+        tools: "react + scss + react router dom + react slick + axios 공공데이터 API",
         contribution: "100%",
     },
 

@@ -46,7 +46,7 @@ const Fsection = () => {
                     <dl>
                         <dt>CONTACT</dt>
                         <dd>
-                            <a href="tel:010">010-0000-0000</a>
+                            <a href="tel:010-2479-4020">010-2379-4020</a>
                         </dd>
                         <dd>
                             <a href="mailto:rkdud4020@gmail.com">rkdud4020@gmail.com</a>

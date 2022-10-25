@@ -8,7 +8,7 @@ react fullpage를 이용한 포트폴리오 웹사이트입니다.
 
 ---
 
-1. introduce
+1. Introduce
 2. Portfolio
    * 부산관광공사 : https://chae-g-0.github.io/test11/
    * 서울대학교 : https://chae-g-0.github.io/test10/
