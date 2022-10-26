@@ -29,6 +29,15 @@ const Fsection = () => {
                         </dd>
                     </dl>
                     <dl>
+                        <dt>CONTACT</dt>
+                        <dd>
+                            <a href="tel:010-2479-4020">010-2379-4020</a>
+                        </dd>
+                        <dd>
+                            <a href="mailto:rkdud4020@gmail.com">rkdud4020@gmail.com</a>
+                        </dd>
+                    </dl>
+                    <dl>
                         <dt>LICENSE</dt>
                         <dd>
                             컴퓨터활용 2급 필기
@@ -41,15 +50,6 @@ const Fsection = () => {
                         <dd>
                             운전면허 2종 보통
                             <span>2015.01</span>
-                        </dd>
-                    </dl>
-                    <dl>
-                        <dt>CONTACT</dt>
-                        <dd>
-                            <a href="tel:010-2479-4020">010-2379-4020</a>
-                        </dd>
-                        <dd>
-                            <a href="mailto:rkdud4020@gmail.com">rkdud4020@gmail.com</a>
                         </dd>
                     </dl>
                     <dl>

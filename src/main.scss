@@ -296,12 +296,6 @@ body {
             backdrop-filter: blur(7px);
             padding: 5rem;
 
-            h2 {
-                font-size: 2.3rem;
-                font-weight: 700;
-                margin: 0 0.5rem 0 0;
-            }
-
             .box {
                 display: flex;
                 position: absolute;
@@ -337,36 +331,40 @@ body {
                 }
 
                 .right {
-                    // border-right: 1px solid #333;
+                    position: relative;
                     flex: 1;
                     transform: translateX(100px);
                     opacity: 0;
                     transition: 1s 0.7s;
                     margin: auto 0;
                     height: 40vh;
-                    padding: 0 50px 0 0;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0;
+                        left: 110%;
+                        width: 1px;
+                        height: 40vh;
+                        background: rgba(0, 0, 0, 0.3);
+                    }
 
                     .tit {
                         position: relative;
                         display: flex;
-                        margin: 0 0 1rem 0;
+                        margin: 0 0 2rem 0;
                         justify-content: space-between;
+
+                        h2 {
+                            font-size: 2.7rem;
+                            font-weight: 700;
+                            margin: 0 0.5rem 0 0;
+                        }
 
                         span {
                             margin: auto 0 0 0;
                             font-weight: 500;
                         }
-
-                        // &::after {
-                        //     content: "";
-                        //     position: absolute;
-                        //     top: 5rem;
-                        //     left: 0;
-                        //     transform: translateY(-50%);
-                        //     width: 5rem;
-                        //     height: 1px;
-                        //     background: $mainColor;
-                        // }
                     }
 
                     span {
@@ -377,7 +375,7 @@ body {
                     }
 
                     p {
-                        font-size: 1.7rem;
+                        font-size: 1.5rem;
                         font-weight: 500;
                         margin: 0 0 25px 0;
                         word-break: keep-all;
@@ -455,12 +453,13 @@ body {
     .inner {
         display: flex;
         padding: 5rem;
-        align-items: center;
+        // align-items: center;
+        justify-content: center;
     }
 
     .container {
         display: flex;
-        gap: 50px;
+        gap: 100px;
         align-items: center;
         word-break: keep-all;
 
@@ -489,12 +488,15 @@ body {
         }
 
         .rbox {
-            display: flex;
-            gap: 50px;
+            display: grid;
+            column-gap: 100px;
+            row-gap: 100px;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
 
             dl {
                 dt {
-                    font-size: 19px;
+                    font-size: 21px;
                     font-weight: 700;
                     margin: 0 0 10px 0;
                 }
