@@ -76,7 +76,7 @@ const App = () => {
                             <div className="section">
                                 <Intro />
                             </div>
-                            {PD.map((it) => {
+                            {PD.map((it, idx) => {
                                 return (
                                     <div className="section">
                                         <div className="inner">

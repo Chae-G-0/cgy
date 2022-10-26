@@ -252,7 +252,7 @@ body {
         }
         &:nth-child(8):after {
             content: "Profile";
-            top: 13rem;
+            top: 10rem;
             right: 13rem;
             font-size: 100px;
         }
@@ -453,7 +453,6 @@ body {
     .inner {
         display: flex;
         padding: 5rem;
-        // align-items: center;
         justify-content: center;
     }
 
@@ -490,7 +489,7 @@ body {
         .rbox {
             display: grid;
             column-gap: 100px;
-            row-gap: 100px;
+            row-gap: 50px;
             grid-template-columns: repeat(2, 1fr);
             grid-template-rows: repeat(2, 1fr);
 
