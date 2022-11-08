@@ -9,7 +9,6 @@ const Fsection = () => {
                         <img src={process.env.PUBLIC_URL + "/img/profile.jpg"} alt="" />
                     </div>
                     <p>채가영</p>
-                    <span>1996.10.24</span>
                 </div>
                 <div className="rbox">
                     <dl>
